@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Content Broadcasting System Backend
 
 Backend-only assignment using Node.js, Express and PostgreSQL.
@@ -28,3 +29,6 @@ The /api/content/live endpoint is cached using Redis to improve performance.
 
 Example:
 live:2:maths
+=======
+# Content-Broadcasting-System
+>>>>>>> a8c8ff6a6809334efb8f017e87e938d5a09cb38f
