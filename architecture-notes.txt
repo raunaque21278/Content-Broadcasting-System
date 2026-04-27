@@ -1,0 +1,67 @@
+Content Broadcasting System - Architecture Notes
+
+1. Authentication & RBAC Flow
+The system uses JWT authentication.
+After login, the user receives a JWT token.
+Protected routes verify the token using authMiddleware.
+RBAC is enforced using roleMiddleware.
+Teacher can upload and view own content.
+Principal can view all uploaded content and approve/reject content.
+
+2. Subject-Based System Design
+Each content belongs to a subject such as maths or science.
+Subjects are stored in content_slots.
+The content_schedule table connects content with a subject slot.
+Each subject has independent rotation order and duration.
+
+3. Upload Handling Approach
+Multer is used for local file upload.
+Only JPG, PNG and GIF files are supported.
+Maximum allowed file size is 10MB.
+Uploaded files are stored inside the uploads folder.
+File path, file type and file size are saved in PostgreSQL.
+
+4. Approval Workflow Design
+Teacher uploads content.
+Content status is pending by default.
+Principal can approve or reject content.
+Rejected content stores rejection reason.
+Only approved content is available in public API.
+
+5. Scheduling and Rotation Logic
+Each content has start_time and end_time.
+Content is shown only when current time is between start_time and end_time.
+The scheduling service groups content subject-wise.
+For each subject, total rotation duration is calculated.
+The current timestamp is used with modulo operation to find active content.
+Rotation continues in a loop.
+
+6. Database Design Decisions
+users table stores principal and teacher accounts.
+content table stores uploaded content and approval details.
+content_slots table stores unique subjects.
+content_schedule table stores rotation order and duration.
+Foreign keys maintain relationships.
+
+7. Folder Structure
+controllers: API request logic
+routes: endpoint definitions
+middlewares: auth, role, upload, error handling
+services: scheduling business logic
+config: database connection
+utils: token helper
+
+8. Middleware Usage
+authMiddleware checks JWT.
+roleMiddleware checks role permissions.
+uploadMiddleware handles file upload validation.
+errorMiddleware handles multer and server errors.
+
+9. Scalability Approach
+For production:
+- Use S3 instead of local storage.
+- Use Redis cache for public live API.
+- Add rate limiting on public endpoint.
+- Add pagination for content listing.
+- Add analytics for content views.
+- Add background jobs for heavy processing.
