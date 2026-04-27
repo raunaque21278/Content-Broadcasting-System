@@ -1,0 +1,591 @@
+{
+  "info": {
+    "_postman_id": "03d3d73d-df6d-4a4e-b580-82803c83f119",
+    "name": "API Collections",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54325786",
+    "_collection_link": "https://go.postman.co/collection/54325786-03d3d73d-df6d-4a4e-b580-82803c83f119?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Health check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register Principal",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Principal One\",\r\n  \"email\": \"principal@example.com\",\r\n  \"password\": \"Principal@123\",\r\n  \"role\": \"principal\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/auth/register",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register Teacher",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Teacher One\",\r\n  \"email\": \"teacher@example.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"teacher\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/auth/register",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login Principal",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"principal@example.com\",\r\n  \"password\": \"Principal@123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/auth/login",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login Teacher",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"teacher@example.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/auth/login",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Content as Teacher",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NzczMjA2MzQsImV4cCI6MTc3NzkyNTQzNH0.o2xxHDCFSKVYimOSL2nt9r7J7qTi3LTL6W9xsObAT0c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "environment",
+              "type": "text",
+              "uuid": "e66a5511-6fed-45d0-b404-f2c9f864303a"
+            },
+            {
+              "key": "description",
+              "value": "air",
+              "type": "text",
+              "uuid": "b7e14894-6968-441e-b808-139e377598c9"
+            },
+            {
+              "key": "subject",
+              "value": "science",
+              "type": "text",
+              "uuid": "42fc26b3-4b4d-4b20-b127-c3fef977edc4"
+            },
+            {
+              "key": "start_time",
+              "value": "2026-04-27 00:00:00",
+              "type": "text",
+              "uuid": "d427cc26-4176-49fe-83c7-1d93b3f31042"
+            },
+            {
+              "key": "end_time",
+              "value": "2026-04-30 23:59:00",
+              "type": "text",
+              "uuid": "0c252210-51b8-4488-87ec-84a7932aa55f"
+            },
+            {
+              "key": "duration",
+              "value": "1",
+              "type": "text",
+              "uuid": "e62ee234-6ad4-485d-95ae-2decc8a09f2d"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "cd6c9481-5a61-4235-8fea-821bb8dfa3fc",
+              "src": "/C:/Users/RAUNAQUE/Desktop/Raunaque/WhatsApp Image 2024-10-15 at 23.22.07_f1a32afc.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/content/upload",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "content",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Teacher View Own Content",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NzczMjA2MzQsImV4cCI6MTc3NzkyNTQzNH0.o2xxHDCFSKVYimOSL2nt9r7J7qTi3LTL6W9xsObAT0c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/content/my",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "content",
+            "my"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Principal View All Content",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmluY2lwYWxAZXhhbXBsZS5jb20iLCJyb2xlIjoicHJpbmNpcGFsIiwiaWF0IjoxNzc3MzIwNTA2LCJleHAiOjE3Nzc5MjUzMDZ9.xCKcuehfsSwTQwLujQqnkXpVMtORKkrfjLEgqMSU1Qk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/content/all",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "content",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Principal View All Content with filter pending",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmluY2lwYWxAZXhhbXBsZS5jb20iLCJyb2xlIjoicHJpbmNpcGFsIiwiaWF0IjoxNzc3MzIwNTA2LCJleHAiOjE3Nzc5MjUzMDZ9.xCKcuehfsSwTQwLujQqnkXpVMtORKkrfjLEgqMSU1Qk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/content/all?status=pending",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "content",
+            "all"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "pending"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Principal View All Content with filter subject",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmluY2lwYWxAZXhhbXBsZS5jb20iLCJyb2xlIjoicHJpbmNpcGFsIiwiaWF0IjoxNzc3MzIwNTA2LCJleHAiOjE3Nzc5MjUzMDZ9.xCKcuehfsSwTQwLujQqnkXpVMtORKkrfjLEgqMSU1Qk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/content/all?subject=maths",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "content",
+            "all"
+          ],
+          "query": [
+            {
+              "key": "subject",
+              "value": "maths"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Principal View All Content with filter teacher id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmluY2lwYWxAZXhhbXBsZS5jb20iLCJyb2xlIjoicHJpbmNpcGFsIiwiaWF0IjoxNzc3MzIwNTA2LCJleHAiOjE3Nzc5MjUzMDZ9.xCKcuehfsSwTQwLujQqnkXpVMtORKkrfjLEgqMSU1Qk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/content/all?teacher=2",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "content",
+            "all"
+          ],
+          "query": [
+            {
+              "key": "teacher",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Principal View All Content with filter limit",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmluY2lwYWxAZXhhbXBsZS5jb20iLCJyb2xlIjoicHJpbmNpcGFsIiwiaWF0IjoxNzc3MzIwNTA2LCJleHAiOjE3Nzc5MjUzMDZ9.xCKcuehfsSwTQwLujQqnkXpVMtORKkrfjLEgqMSU1Qk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/content/all?page=1&limit=5",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "content",
+            "all"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Approve Content",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmluY2lwYWxAZXhhbXBsZS5jb20iLCJyb2xlIjoicHJpbmNpcGFsIiwiaWF0IjoxNzc3MzIwNTA2LCJleHAiOjE3Nzc5MjUzMDZ9.xCKcuehfsSwTQwLujQqnkXpVMtORKkrfjLEgqMSU1Qk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/approval/1/approve",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "approval",
+            "1",
+            "approve"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reject Content",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmluY2lwYWxAZXhhbXBsZS5jb20iLCJyb2xlIjoicHJpbmNpcGFsIiwiaWF0IjoxNzc3MzIxNjQ1LCJleHAiOjE3Nzc5MjY0NDV9.dcb-9fPDTz6mpxzEiJKg2hJ24YASACwS-SOxSYaC9T8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"reason\": \"Wrong file uploaded\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/approval/2/reject",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "approval",
+            "2",
+            "reject"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Public Live API",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/content/live/2?subject=maths",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "content",
+            "live",
+            "2"
+          ],
+          "query": [
+            {
+              "key": "subject",
+              "value": "maths"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Analytics",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmluY2lwYWxAZXhhbXBsZS5jb20iLCJyb2xlIjoicHJpbmNpcGFsIiwiaWF0IjoxNzc3MzIxNjQ1LCJleHAiOjE3Nzc5MjY0NDV9.dcb-9fPDTz6mpxzEiJKg2hJ24YASACwS-SOxSYaC9T8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://content-broadcasting-system-k5gl.onrender.com/api/content/analytics/subjects",
+          "protocol": "https",
+          "host": [
+            "content-broadcasting-system-k5gl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "content",
+            "analytics",
+            "subjects"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
